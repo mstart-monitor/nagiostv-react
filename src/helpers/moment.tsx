@@ -157,7 +157,7 @@ export function listLocales() {
 
 export function momentFormatDateTime(date, locale, format) {
 	if (date === 0) { return 'Never'; }
-	if (date === 'now') { date = new Date().getTime() }
+	if (date === 'now') { date = new Date().getTime()-7200000 }
 	if (!locale) { locale = 'en'; }
 	if (format) {
 		var m = moment(date).locale(locale).format(format);
